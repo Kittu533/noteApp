@@ -8,5 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+
+    protected $fillable = [
+        'title',
+        'description',
+        'nama_matkul', // Nama Mata Kuliah
+        'batas_waktu', // Batas Waktu Pengerjaan
+        'image', // Jika ada field image
+    ];
 }

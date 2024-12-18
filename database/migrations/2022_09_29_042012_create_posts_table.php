@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->longText('description');
+            $table->string('title'); // Judul Post
+            $table->longText('description'); // Deskripsi Post
+            $table->string('nama_matkul'); // Nama Mata Kuliah
+            $table->timestamp('batas_waktu')->nullable(); // Batas Waktu Pengerjaan
             $table->timestamps();
         });
     }
